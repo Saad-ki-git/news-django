@@ -1,0 +1,48 @@
+:root {
+    font-size: 20px;
+    box-sizing: inherit;
+    left: 10vh;
+    
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  p:not(:last-child) {
+    margin-bottom: 1.5em;
+  }
+  
+  
+  .card {
+    max-width: 1000px;
+    min-height: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    max-width: 800px; /* Increase the max-width to make the card wider */
+    height: 400px; /* You can adjust the height as needed */
+    padding: 20px; /* Decrease the padding to allow more content width */
+  
+    border: 1px solid #d6dbdb;
+    border-radius: 20px;
+    background-color: #d6dbdb;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    height: auto;
+    overflow-y: auto;
+    overflow: auto;
+    overflow-x: auto;
+    backdrop-filter: blur(15px);
+  }
+  .card-content {
+    min-height: 100%;
+  }

@@ -1,0 +1,5 @@
+.card {
+    display: inline-block; /* This makes the cards display horizontally */
+    margin-right: 10px;    /* Adds some spacing between cards (adjust as needed) */
+  }
+  
