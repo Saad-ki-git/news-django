@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./css/BlogDetail.css"
+import { Center, flexbox } from "@chakra-ui/react";
 const ListingDetail = (props) => {
   // since we are getting only single value that's why did't using array instead using objects and no need to use map function to display
   const [detailListing, setDetailListing] = useState({});
@@ -30,19 +31,27 @@ const ListingDetail = (props) => {
 
   return (
     <>
-      <div className="max-w-500 min-h-500 h-auto flex flex-col justify-center items-center max-w-800 h-400 p-10   rounded-lg   overflow-y-auto overflow-x-auto backdrop-blur-md">
-      {/* <img
-          src={detailListing.photo}
+
+
+
+      <div className="card">
+        <img
+          src={`http://127.0.0.1:8000${detailListing.photo}`}
           alt=""
-          style={{width:"700px",marginTop:"19px",marginLeft:"100px"}}
-          className="mb-6 shadow-md rounded-lg bg-slate-50 sm:w-[17rem] sm:mb-0 xl:mb-6 "
+          style={{
+            width: "700px",
+            marginTop: "19px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "300px",
+          }}
+          className="mb-6 shadow-md rounded-lg bg-slate-50 sm:w-[17rem] sm:mb-0 xl:mb-6"
           width="1216"
           height="640"
-        /> */}
-        <strong>{detailListing.title}</strong>
-        <p>{detailListing.text}.</p>
-        <p>{detailListing.is_published}</p>
-        
+        />
+        <p>{detailListing.detail_desc}.</p>
+        <p className="card-footer">{detailListing.author_name}.</p>
       </div>
     </>
   );
@@ -50,3 +59,4 @@ const ListingDetail = (props) => {
 
 
 export default ListingDetail;
+
