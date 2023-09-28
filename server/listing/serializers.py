@@ -15,7 +15,7 @@ class ListingDetailSerializer(serializers.ModelSerializer):
     author_email = serializers.StringRelatedField(source='author.email',read_only=True)
     class Meta:
         model = Listing
-        fields = "__all__"
+        fields = ["title","author_name","created_at","photo","author_email","is_published","slug","desc","detail_desc"]
         lookup_field = "slug"
         
 
