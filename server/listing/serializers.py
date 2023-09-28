@@ -11,6 +11,8 @@ class ListingSerializer(serializers.ModelSerializer):
         
 # showing the whole blog detail   
 class ListingDetailSerializer(serializers.ModelSerializer):
+    author_name = serializers.StringRelatedField(source='author.name',read_only=True)
+    author_email = serializers.StringRelatedField(source='author.email',read_only=True)
     class Meta:
         model = Listing
         fields = "__all__"
